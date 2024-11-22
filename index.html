@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja de Cupcakes</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&display=swap');
+        </style>
+</head>
+<body>
+    
+    <!-- Tela de Carregamento -->
+    <div id="loading-screen">
+        <div class="spinner"></div>
+        <p>Lá vem as delicias...</p>
+    </div>
+
+    <header>
+        <h1>🧁 Loja de Cupcakes</h1>
+        <nav>
+            <a href="index.html">Produtos</a>
+            <a href="carrinho.html" id="carrinho-logo">
+                🛒 Carrinho (<span id="contador-carrinho">0</span>)
+            </a>
+        </nav>
+    </header>
+    
+
+    <main>
+        <h2>Nossos Cupcakes</h2>
+        <section id="produtos">
+            
+            <div class="produto">
+                <a href="produto-chocolate.html">
+                    <img src="imagens/chocolate1.jpg" alt="Cupcake de Chocolate">
+                </a>
+                <h3>Cupcake de Chocolate</h3>
+                <p>O clássico chocolate, irresistível e cremoso!</p>
+                <span>R$ 5,00</span>
+                <button class="add-carrinho" data-nome="Cupcake de Chocolate" data-preco="5.00">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="produto">
+                <a href="produto-baunilha.html">
+                    <img src="imagens/baunilha1.jpg" alt="Cupcake de Baunilha">
+                </a>
+                <h3>Cupcake de Baunilha</h3>
+                <p>Clássico e aromático, perfeito em cada mordida.</p>
+                <span>R$ 8,50</span>
+                <button class="add-carrinho" data-nome="Cupcake de Baunilha" data-preco="8.50">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="produto">
+                <a href="produto-coco.html">
+                    <img src="imagens/coco1.jpg" alt="Cupcake de Coco">
+                </a>
+                <h3>Cupcake de Coco</h3>
+                <p>Leve, tropical e com o toque perfeito de coco..</p>
+                <span>R$ 9,50</span>
+                <button class="add-carrinho" data-nome="Cupcake de Coco" data-preco="9.50">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="produto">
+                <a href="produto-limao.html">
+                    <img src="imagens/Limao1.jpg" alt="Cupcake de Limao">
+                </a>
+                <h3>Cupcake de Limão</h3>
+                <p>Refrescância cítrica para os paladares mais apurados.</p>
+                <span>R$ 2,00</span>
+                <button class="add-carrinho" data-nome="Cupcake de Limao" data-preco="2.00">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="produto">
+                <a href="produto-morango.html">
+                    <img src="imagens/Morango1.jpg" alt="Cupcake de Morango">
+                </a>
+                <h3>Cupcake de Morango</h3>
+                <p>Delicado e doce como um campo de morangos.</p>
+                <span>R$ 5,50</span>
+                <button class="add-carrinho" data-nome="Cupcake de Morango" data-preco="5.50">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="produto">
+                <a href="produto-redvelvet.html">
+                    <img src="imagens/Red1.jpg" alt="Cupcake de RedVelvet">
+                </a>
+                <h3>Cupcake de Red Velvet</h3>
+                <p>Elegância e sabor em um toque aveludado.</p>
+                <span>R$ 12,75</span>
+                <button class="add-carrinho" data-nome="Cupcake de RedVelvet" data-preco="12.75">Adicionar ao Carrinho</button>
+            </div>
+           
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Loja de Cupcakes. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

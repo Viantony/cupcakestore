@@ -1,0 +1,493 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Tela de Carregamento */
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #ffe4e1; /* Fundo rosa pastel */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Fica acima de todos os elementos */
+    font-family: 'Arial', sans-serif;
+    color: #ff69b4;
+    text-align: center;
+}
+
+/* Spinner de Carregamento */
+.spinner {
+    border: 8px solid #f3f3f3; /* Cor clara do círculo */
+    border-top: 8px solid #ff69b4; /* Cor principal do círculo */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+/* Animação do Spinner */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Texto de carregamento */
+#loading-screen p {
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+
+
+header {
+    background: url('imagens/background.jpeg') no-repeat center center/cover;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header nav a {
+    margin: 0 150px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+main {
+    background-color: #ffe4e1;
+    padding: 20px 0;
+    min-height: 90vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+main h2 {
+    text-align: center; 
+    font-family: 'Georgia', serif; 
+    font-size: 40px; 
+    font-weight: bold; 
+    color: #a4105a; 
+    margin-top: 2px;
+    margin-bottom: 2px; 
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+
+
+#produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+    gap: 20px; 
+    margin: 0 auto;
+    padding: 20px;
+    width: 100%; 
+    max-width: 1600px; 
+    justify-content: center;
+    height: 90%; 
+}
+
+
+
+section#produtos .produto {
+    background-color:rgb(221, 208, 208); 
+    border: 1px solid #ddd; 
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 6px; 
+}
+
+.produto:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+section#produtos .produto h3 {
+    font-family: sour gummy;
+    color: #6b4848;
+}
+
+section#produtos .produto p {
+    font-family: 'Edu AU VIC WA NT Pre', sans-serif;
+    font-size: 16px;
+    margin: 10px 0;
+    color: #000000;
+    background-color: #ccb1ba; 
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: #ffb6c1;
+    color: #fff;
+    text-align: center;
+    padding: 20px; 
+    position: relative; 
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1); 
+    z-index: 10;
+}
+
+.produto img {
+    max-width: 100%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    height: auto;
+}
+
+.produto h3 {
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    margin: 10px 0;
+    color: #333;
+}
+
+.produto p {
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    margin: 0 10px 10px;
+    color: #555;
+}
+
+.produto span {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    color: #4caf50; 
+    margin: 10px 0;
+}
+
+button.add-carrinho {
+    background-color: #ff69b4; 
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button.add-carrinho:hover {
+    background-color: #ff1493; 
+    transform: scale(1.1); 
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 300px;
+    margin: auto;
+}
+
+form input, form textarea, form button {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #ffb6c1;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+#carrinho {
+    margin-top: 30px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+}
+
+#itens-carrinho div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+#carrinho-logo {
+    font-size: 1.2em;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+#pagamento {
+    margin-top: 20px;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+}
+
+/* Estilo para o pop-up de mensagem */
+.popup-mensagem {
+    position: fixed;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: top 0.5s ease-in-out;
+}
+
+.popup-mensagem-show {
+    top: 20px;
+}
+
+div#itens-carrinho + div {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+button#remover-todos {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+button#remover-todos:hover {
+    background-color: #d32f2f;
+}
+
+#botoes-carrinho {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+
+
+.produto img {
+    max-width: 100%;
+    height: auto; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.3s ease; 
+}
+
+.produto img:hover {
+    transform: scale(1.05); 
+}
+
+
+.produto-individual img {
+    max-width: 80%; 
+    height: auto;
+    display: block;
+    margin: 20px auto; 
+    border-radius: 10px; 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
+}
+
+
+
+#produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px; 
+    justify-items: center;
+    margin: 20px 0;
+}
+
+.produto {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.produto img {
+    width: 100%;
+    height: auto; 
+}
+
+
+.produto-individual {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.produto-individual img {
+    width: 100%;
+    max-width: 400px; 
+    height: auto;
+    border-radius: 10px;
+}
+
+.produto-individual-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.produto-individual-content p,
+.produto-individual-content span {
+    font-size: 16px;
+    font-family: 'Edu AU VIC WA NT Pre', sans-serif;
+}
+
+.produto-individual-content span {
+    font-weight: bold;
+    color: #4caf50;
+}
+
+
+.produto-individual-botoes {
+    position: fixed;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    z-index: 1000;
+}
+
+.produto-individual-botoes button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.produto-individual-botoes button:hover {
+    background-color: #45a049;
+}
+
+
+
+#itens-carrinho {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    font-family: 'Edu AU VIC WA NT Pre', sans-serif;
+}
+
+
+.produto-carrinho {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd; 
+    border-radius: 8px;
+    background-color: #b4acab; 
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    gap: 15px; 
+    transition: background-color 0.3s ease; 
+}
+
+.produto-carrinho:hover {
+    background-color: #ffd1dc;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); 
+}
+
+
+.thumbnail {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+
+.detalhes-produto {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    flex-grow: 1;
+}
+
+.nome-produto {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.preco-produto {
+    font-size: 14px;
+    font-weight: bold;
+    color: #4caf50;
+}
+
+
+.btn-remover {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-remover:hover {
+    background-color: #d32f2f;
+}
